@@ -1,20 +1,14 @@
-BANCO DE DADOS - MySQL
+### BANCO DE DADOS - MySQL
 
 **SDGB** - Sistema de gerenciamento de banco de dados
-
-**DML** - 
-
-**DDL**
 
 **Chave Primária/Primary Key** - identificação id
 
 **Chave estrangeira/Foreign Key** - Referencia de um dado de outra tabela
 
-Banco de dados relacional e não relacional
+#### Tipos de dados:
 
-Tipos de dados:
-
-BIGINT(Long), VARCHAR(String)
+BIGINT(Long), VARCHAR(String), BOOLEAN, DECIMAL (5, 2)
 
 ```
 CREATE DATABASE db_nome;
