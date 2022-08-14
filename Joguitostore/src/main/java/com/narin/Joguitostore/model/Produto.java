@@ -8,8 +8,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -20,10 +22,11 @@ public class Produto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotNull
+	@NotBlank(message = "O nome do produto é obrigatório.")// TODO
+	@Size(min = 2, max = 100)
 	private String nomeP;
 	
-	@NotNull
+	@NotNull(message = "O valor do produto é obrigatório.")
 	@Positive
 	private BigDecimal valor;
 	
